@@ -2,6 +2,8 @@
 
 A small SNMP exporter written in Go. It polls network devices (routers, switches, OLTs) over SNMP v2c and exposes interface metrics for Prometheus. The repo ships with a full demo stack: a simulated router, Prometheus with alert rules, and a ready-made Grafana dashboard.
 
+![Grafana dashboard: interface traffic, errors and status from the simulated router](docs/dashboard.png)
+
 ## What it collects
 
 | Metric | Source (MIB object) | Type |
