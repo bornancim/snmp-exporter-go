@@ -1,0 +1,4 @@
+github.com/gosnmp/gosnmp v1.45.0 h1:dc3Y/F7qhY8v+Eeb+3Hq+AnSBxQ8mGbwoHEPgWZRkxI=
+github.com/gosnmp/gosnmp v1.45.0/go.mod h1:LWPVcDKeRsiioQGeITGTQha4mdlx9lgmRmXz6zGINQ4=
+github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
+github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=

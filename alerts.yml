@@ -1,0 +1,23 @@
+groups:
+  - name: snmp
+    rules:
+      - alert: DeviceUnreachable
+        expr: snmp_up == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations:
+          summary: "SNMP target {{ $labels.target }} is not responding"
+
+      - alert: InterfaceDown
+        expr: snmp_if_oper_status == 2
+        for: 2m
+        labels: {severity: warning}
+        annotations:
+          summary: "{{ $labels.ifname }} on {{ $labels.target }} is down"
+
+      - alert: InterfaceErrors
+        expr: rate(snmp_if_in_errors_total[5m]) + rate(snmp_if_out_errors_total[5m]) > 0
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "{{ $labels.ifname }} on {{ $labels.target }} is logging errors"
